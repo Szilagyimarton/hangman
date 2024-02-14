@@ -1,0 +1,8 @@
+.letter{
+  padding: 10px;;
+  border-bottom: 3px solid black;
+  margin: 10px;
+}
+.letter span{
+  font-size: 2rem;
+}
