@@ -1,0 +1,25 @@
+.hangmanWord{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.wordToGuess{
+
+  padding: 10px;;
+  border-bottom: 3px solid black;
+  margin: 10px;
+  max-width: 50px;
+ width: 100%;
+ font-size: 2rem;
+ text-transform: uppercase;
+ font-weight: 700;
+}
+.hangmanWord p{
+  font-size: 2rem;
+}
+@media only screen and (max-width:400px){
+  .wordToGuess{
+    font-size:1rem ;
+  }
+  
+}

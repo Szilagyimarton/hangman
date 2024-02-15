@@ -1,0 +1,36 @@
+.keyboard{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+  max-width: 500px;
+}
+.keyboard  button{
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.keyboard  button:hover{
+  background-color: black;
+  color: white;
+}
+.keyboard button:disabled{
+  color: rgba(16, 16, 16, 0.3);
+  background-color: rgba(113, 108, 108, 0.3);
+
+}
+.keyboard button:disabled:hover{
+  color: rgba(16, 16, 16, 0.3);
+  background-color: rgba(113, 108, 108, 0.3);
+}
+@media only screen and (max-width:400px){
+  .keyboard button{
+    font-size:0.8rem ;
+  }
+  
+}

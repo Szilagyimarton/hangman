@@ -1,7 +1,8 @@
-import { useState } from "react"
 
-function HangmanLetters({ setGuessedLetters,randomWord,setWrongLetters }) {
-  const [clicked, setClicked] = useState([])
+import './HangmanLetters.css'
+
+function HangmanLetters({ setGuessedLetters,randomWord,setWrongLetters,isWinner,isLoser,clicked,setClicked }) {
+  
   
   const handleClick = (e,index) => {
        setGuessedLetters(prev => [...prev,e.target.value])
@@ -16,8 +17,8 @@ function HangmanLetters({ setGuessedLetters,randomWord,setWrongLetters }) {
 
   const letters = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   return (
-    <div>
-      {letters.map((letter,index) => <button disabled={isClicked(index)} value={letter} key={index} onClick={(e) =>handleClick(e,index)}>{letter}</button>)}
+    <div className="keyboard">
+      {letters.map((letter,index) => <button disabled={isClicked(index) || isWinner || isLoser} value={letter} key={index} onClick={(e) =>handleClick(e,index)}>{letter}</button>)}
     </div>
   )
 }
