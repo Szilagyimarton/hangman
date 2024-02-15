@@ -48,10 +48,25 @@
   height: 5px;
   background-color: black;
   position: absolute;
-  right: -20px;
+  right: -18px;
   top: 80px;
   rotate: -30deg;
   transform-origin: left bottom;
+  
+  
+}
+
+.hithere{
+  width: 20px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  right: -18px;
+  top: 80px;
+  rotate: -30deg;
+  transform-origin: left bottom;
+  
+  animation: hithere 2s infinite;
 }
 .left-arm{
   width: 20px;
@@ -84,4 +99,10 @@
   rotate:-60deg;
   transform-origin: right bottom; 
  
+}
+
+@keyframes hithere {
+  0% {rotate: -30deg}
+  50% {rotate: 30deg}
+  100% {rotate: -30deg}
 }
